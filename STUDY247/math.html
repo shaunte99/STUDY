@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study247 | Foundation Phase Math</title>
+  <link rel="stylesheet" href="styles/math.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🧮 Foundation Phase: Math</h1>
+    <p>Learn, play & grow smarter every day!</p>
+    <label for="grade-select">Choose a grade:</label>
+    <select id="grade-select">
+      <option value="gradeR">Grade R</option>
+      <option value="grade1">Grade 1</option>
+      <option value="grade2">Grade 2</option>
+      <option value="grade3">Grade 3</option>
+      <option value="grade4">Grade 4</option>
+    </select>
+  </header>
+
+  <main>
+    <section id="lessons-container">
+      <!-- JS injects lessons here -->
+    </section>
+  </main>
+
+  <!-- EMBED JSON DATA HERE -->
+  <script id="math-data" type="application/json">
+  {
+    "gradeR": {
+      "topics": [
+        {
+          "title": "Counting 1 to 10",
+          "lesson": "Learn how to count from 1 to 10 using fun pictures!",
+          "media": "images/counting.gif",
+          "quiz": [
+            {
+              "question": "How many apples do you see?",
+              "options": ["2", "5", "10", "8"],
+              "answer": "5"
+            }
+          ]
+        }
+      ]
+    },
+    "grade1": {
+      "topics": [
+        {
+          "title": "Simple Addition",
+          "lesson": "Adding is putting things together!",
+          "media": "images/addition.gif",
+          "quiz": [
+            {
+              "question": "What is 2 + 3?",
+              "options": ["4", "5", "6", "7"],
+              "answer": "5"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  </script>
+
+  <script src="scripts/math.js"></script>
+</body>
+</html>

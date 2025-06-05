@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    background: #fff8f2;
+    color: #333;
+  }
+  
+  .site-header {
+    background: #ffd6a5;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ff7f9c;
+  }
+  
+  .nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3rem 2rem;
+    background: #caf0f8;
+  }
+  
+  .hero-text {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    color: #0077b6;
+  }
+  
+  .start-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: #ff7f9c;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  .start-btn:hover {
+    background: #ff5e81;
+  }
+  
+  .hero-img img {
+    max-width: 400px;
+  }
+  
+  .features {
+    padding: 2rem;
+    background: #eafaff;
+    text-align: center;
+  }
+  
+  .features h2 {
+    color: #03045e;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .card {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .site-footer {
+    background: #d4a5ff;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+  }
+  
