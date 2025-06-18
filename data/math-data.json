@@ -1,39 +1,102 @@
-// Alert on start button click
-document.querySelector('.start-btn').addEventListener('click', () => {
-  alert("Let's start learning! 🚀");
-});
-
-// Fetch weather info from OpenWeatherMap API
-async function fetchWeather() {
-  try {
-    const res = await fetch(
-      'https://api.openweathermap.org/data/2.5/weather?q=Krugersdorp,ZA&appid=YOUR_API_KEY&units=metric'
-    );
-    if (!res.ok) throw new Error('Network response was not ok');
-    const data = await res.json();
-    document.getElementById("weather-info").innerText = 
-      `🌤️ Weather in Krugersdorp: ${data.main.temp}°C, ${data.weather[0].main}`;
-  } catch (e) {
-    console.error("Weather API error:", e);
-    document.getElementById("weather-info").innerText = "Weather info not available.";
+{
+  "gradeR": {
+    "topics": [
+      {
+        "title": "Counting to 5",
+        "lesson": "Count the bugs below!",
+        "media": "https://via.placeholder.com/300x200?text=Bugs",
+        "quiz": [
+          { "question": "How many bugs are there?", "options": ["2", "4", "5"], "answer": "4" }
+        ]
+      },
+      {
+        "title": "Big and Small",
+        "lesson": "Find the smallest fruit!",
+        "media": "https://via.placeholder.com/300x200?text=Fruits",
+        "quiz": [
+          { "question": "Which is smaller?", "options": ["Apple", "Banana", "Grape"], "answer": "Grape" }
+        ]
+      }
+    ]
+  },
+  "grade1": {
+    "topics": [
+      {
+        "title": "Addition up to 10",
+        "lesson": "Let's add numbers up to 10 using balloons.",
+        "media": "https://via.placeholder.com/300x200?text=Addition",
+        "quiz": [
+          { "question": "What is 4 + 3?", "options": ["6", "7", "8"], "answer": "7" }
+        ]
+      },
+      {
+        "title": "Shapes Around Us",
+        "lesson": "Identify the shapes in the image.",
+        "media": "https://via.placeholder.com/300x200?text=Shapes",
+        "quiz": [
+          { "question": "Which shape is round?", "options": ["Square", "Triangle", "Circle"], "answer": "Circle" }
+        ]
+      }
+    ]
+  },
+  "grade2": {
+    "topics": [
+      {
+        "title": "Subtraction",
+        "lesson": "Take away objects and count what’s left.",
+        "media": "https://via.placeholder.com/300x200?text=Subtraction",
+        "quiz": [
+          { "question": "What is 9 - 5?", "options": ["3", "4", "5"], "answer": "4" }
+        ]
+      },
+      {
+        "title": "Measuring Length",
+        "lesson": "Compare the length of pencils.",
+        "media": "https://via.placeholder.com/300x200?text=Ruler",
+        "quiz": [
+          { "question": "Which pencil is longer?", "options": ["Red", "Blue", "Green"], "answer": "Blue" }
+        ]
+      }
+    ]
+  },
+  "grade3": {
+    "topics": [
+      {
+        "title": "Multiplication Basics",
+        "lesson": "Learn how to multiply with groups of apples.",
+        "media": "https://via.placeholder.com/300x200?text=Multiplication",
+        "quiz": [
+          { "question": "3 x 4 = ?", "options": ["12", "9", "7"], "answer": "12" }
+        ]
+      },
+      {
+        "title": "Time Reading",
+        "lesson": "Look at the clocks and tell the time.",
+        "media": "https://via.placeholder.com/300x200?text=Clock",
+        "quiz": [
+          { "question": "What time is shown?", "options": ["3:00", "5:00", "6:00"], "answer": "3:00" }
+        ]
+      }
+    ]
+  },
+  "grade4": {
+    "topics": [
+      {
+        "title": "Division",
+        "lesson": "Split objects equally and learn division.",
+        "media": "https://via.placeholder.com/300x200?text=Division",
+        "quiz": [
+          { "question": "What is 12 ÷ 3?", "options": ["2", "3", "4"], "answer": "4" }
+        ]
+      },
+      {
+        "title": "Fractions",
+        "lesson": "Learn about halves and quarters using pizza slices.",
+        "media": "https://via.placeholder.com/300x200?text=Fractions",
+        "quiz": [
+          { "question": "Which is one quarter?", "options": ["1/2", "1/4", "3/4"], "answer": "1/4" }
+        ]
+      }
+    ]
   }
 }
-
-// Fetch advice from Advice Slip API
-async function fetchAdvice() {
-  try {
-    const res = await fetch('https://api.adviceslip.com/advice');
-    if (!res.ok) throw new Error('Network response was not ok');
-    const data = await res.json();
-    document.getElementById("advice-box").innerText = `💡 Tip: ${data.slip.advice}`;
-  } catch (e) {
-    console.error("Advice API error:", e);
-    document.getElementById("advice-box").innerText = "Advice not available.";
-  }
-}
-
-// Initialize
-fetchWeather();
-fetchAdvice();
-
-  
